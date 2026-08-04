@@ -1,58 +1,58 @@
-# Tendencias Tecnológicas en Stack Overflow (2008–2022)
+# Stack Overflow Technology Trends (2008–2022)
 
-## 📌 Objetivo del proyecto
+## 📌 Project Goal
 
-Analizar preguntas publicadas en Stack Overflow entre 2008 y 2022 para identificar qué tecnologías (lenguajes, frameworks, herramientas) mostraron tendencias de crecimiento o decrecimiento en popularidad a lo largo del tiempo, usando SQL en Google BigQuery.
+Analyze questions posted on Stack Overflow between 2008 and 2022 to identify which technologies (languages, frameworks, tools) showed growth or decline trends in popularity over time, using SQL in Google BigQuery.
 
-**Pregunta de negocio principal:**
-> ¿Qué tecnologías crecieron o decayeron en popularidad entre 2008 y 2022, según el volumen de preguntas publicadas?
+**Main business question:**
+> Which technologies grew or declined in popularity between 2008 and 2022, based on the volume of questions posted?
 
-## 🗂️ Fuente de datos
+## 🗂️ Data Source
 
-- **Dataset:** [`bigquery-public-data.stackoverflow`](https://console.cloud.google.com/marketplace/product/stack-exchange/stack-overflow) (dataset público de Google BigQuery)
-- **Tabla principal:** `posts_questions`
-- **Tamaño:** ~23 millones de preguntas
-- **Rango de fechas disponible:** 31 de julio de 2008 – 25 de septiembre de 2022
+- **Dataset:** [`bigquery-public-data.stackoverflow`](https://console.cloud.google.com/marketplace/product/stack-exchange/stack-overflow) (BigQuery public dataset)
+- **Main table:** `posts_questions`
+- **Size:** ~23 million questions
+- **Available date range:** July 31, 2008 – September 25, 2022
 
-⚠️ **Limitación importante:** los datos no llegan hasta la fecha actual. Las conclusiones de este análisis describen tendencias históricas dentro de ese rango, no el estado actual del mercado tecnológico.
+⚠️ **Important limitation:** the data does not extend to the present day. Conclusions from this analysis describe historical trends within that range, not the current state of the tech market.
 
-## 🛠️ Herramientas utilizadas
+## 🛠️ Tools Used
 
-- Google BigQuery (SQL) — exploración, limpieza y transformación de datos
-- Looker Studio — visualización (pendiente)
-- GitHub — control de versiones y documentación del proceso
+- Google BigQuery (SQL) — exploration, cleaning, and data transformation
+- Looker Studio — visualization (pending)
+- GitHub — version control and process documentation
 
-## 📋 Proceso
+## 📋 Process
 
-### 1. Exploración inicial
-- Se identificaron las tablas disponibles en el dataset `stackoverflow` mediante la consola de BigQuery.
-- Se seleccionó `posts_questions` como tabla principal por contener las columnas clave: `tags`, `creation_date`, `score`, `view_count`.
-- Se determinó el tamaño total de la tabla y el rango de fechas disponible antes de iniciar cualquier análisis, para evitar conclusiones erróneas sobre "tendencias actuales".
+### 1. Initial Exploration
+- Identified the tables available in the `stackoverflow` dataset using the BigQuery console.
+- Selected `posts_questions` as the main table for containing the key columns: `tags`, `creation_date`, `score`, `view_count`.
+- Determined the total table size and available date range before starting any analysis, to avoid drawing conclusions about "current" trends.
 
-### 2. Limpieza y transformación *(en progreso)*
-- La columna `tags` viene como texto plano con múltiples tags separados por `;` (ej. `"python;pandas;dataframe"`). Se requiere transformarla para poder contar tecnologías individuales.
-- Se documentarán aquí las decisiones sobre nulos, valores atípicos (`score` muy negativo, `view_count` en 0), etc.
+### 2. Cleaning and Transformation *(in progress)*
+- The `tags` column comes as plain text with multiple tags separated by `;` (e.g. `"python;pandas;dataframe"`). It needs to be transformed to count individual technologies.
+- Decisions about nulls, outliers (very negative `score`, `view_count` of 0), etc. will be documented here.
 
-### 3. Análisis *(pendiente)*
-- Conteo de preguntas por tecnología a lo largo del tiempo.
-- Identificación de tecnologías en crecimiento vs. declive.
+### 3. Analysis *(pending)*
+- Count of questions per technology over time.
+- Identification of growing vs. declining technologies.
 
-### 4. Visualización *(pendiente)*
-- Dashboard en Looker Studio con los hallazgos principales.
+### 4. Visualization *(pending)*
+- Looker Studio dashboard with key findings.
 
-## 📁 Estructura del repositorio
+## 📁 Repository Structure
 
 ```
 stackoverflow-tech-trends/
-├── README.md          ← este archivo
-├── queries/            ← consultas SQL usadas, en orden cronológico
-└── notas.md            ← decisiones tomadas, hallazgos y cosas raras encontradas en el camino
+├── README.md          ← this file
+├── queries/            ← SQL queries used, in chronological order
+└── notas.md            ← decisions made, findings, and interesting things found along the way
 ```
 
-## 🔍 Hallazgos
+## 🔍 Findings
 
-*(Se irán agregando a medida que avance el análisis)*
+*(To be added as the analysis progresses)*
 
-## 🚧 Estado del proyecto
+## 🚧 Project Status
 
-🟡 En progreso — exploración de datos completada, iniciando limpieza y transformación.
+🟡 In progress — data exploration completed, starting cleaning and transformation.
