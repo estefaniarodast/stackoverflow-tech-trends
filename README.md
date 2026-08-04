@@ -51,8 +51,16 @@ stackoverflow-tech-trends/
 
 ## 🔍 Findings
 
-*(To be added as the analysis progresses)*
+Analysis of 6 major programming languages (Python, JavaScript, Java, PHP, C#, R) from 2008–2022, based on question volume per year:
+
+- **Python** started low but overtook every other language around 2016–2017, ending as the clear leader by 2022 — consistent with the rise of data science and ML during that period.
+- **JavaScript** dominated between 2014–2020, with a noticeable decline after 2020.
+- **PHP** and **C#** show a sustained decline starting around 2014–2016.
+- **R** remained consistently lower in volume compared to the other languages throughout the period.
+- All languages show a drop toward 2022, mainly because that year's data is incomplete (only through September), not necessarily a real decline in interest.
+
+⚠️ 2008 and 2022 should be interpreted with caution: 2008 only has ~5 months of data (Stack Overflow launched July 31, 2008), and 2022 is incomplete.
 
 ## 🚧 Project Status
 
-🟡 In progress — data exploration completed, starting cleaning and transformation.
+🟡 In progress — tag transformation, yearly trend analysis, and first Looker Studio visualization completed. Next: refine visualization and explore additional dimensions (frameworks, view_count/score).
