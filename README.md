@@ -49,6 +49,12 @@ stackoverflow-tech-trends/
 └── notas.md            ← decisions made, findings, and interesting things found along the way
 ```
 
+## 📊 Visualization
+
+[View interactive dashboard on Looker Studio](https://datastudio.google.com/reporting/dc7fdc65-f110-4dcb-80f3-9fc9140db444)
+
+The dashboard shows question volume per year for 6 major programming languages (Python, JavaScript, Java, PHP, C#, R) between 2008 and 2022.
+
 ## 🔍 Findings
 
 Analysis of 6 major programming languages (Python, JavaScript, Java, PHP, C#, R) from 2008–2022, based on question volume per year:
