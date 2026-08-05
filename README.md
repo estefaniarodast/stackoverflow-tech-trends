@@ -67,6 +67,17 @@ Analysis of 6 major programming languages (Python, JavaScript, Java, PHP, C#, R)
 
 ⚠️ 2008 and 2022 should be interpreted with caution: 2008 only has ~5 months of data (Stack Overflow launched July 31, 2008), and 2022 is incomplete.
 
+## 💡 Conclusion
+
+This project walked through a full, small-scale data analysis workflow: exploring an unfamiliar dataset, transforming messy multi-value columns into an analyzable format, aggregating data to answer a specific business question, and communicating the result through a dashboard.
+
+**Key takeaway:** Python's rise and PHP/C#'s decline in question volume align with broader, well-known shifts in the developer ecosystem (the growth of data science/ML and the relative decline of some earlier web-era languages), which gives some confidence that question volume on Stack Overflow is a reasonable, if imperfect, proxy for technology popularity.
+
+**If I extended this project, I would:**
+- Compare frameworks (React, Angular, Vue, Django, Flask) instead of languages, for a more granular view of the ecosystem
+- Weight trends by `view_count` or `score` instead of raw question volume, to account for question quality/engagement
+- Cross-reference with an external source (e.g. Google Trends, GitHub Octoverse) to validate whether Stack Overflow volume actually tracks real-world adoption
+
 ## 🚧 Project Status
 
-🟡 In progress — tag transformation, yearly trend analysis, and first Looker Studio visualization completed. Next: refine visualization and explore additional dimensions (frameworks, view_count/score).
+🟢 Completed — first portfolio project. See [Project 2](#) *(link to be added)* for the next project in this series, focused on product/user behavior analysis.
